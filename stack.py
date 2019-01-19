@@ -83,7 +83,7 @@ def Send_Notification(stackname, notifying_stacks):
 	#############################################Send Email#################################
 	subject="Alert: Stacks Terminating in 7 days"
 	ses_client = boto3.client('ses')
-	response = ses_client.send_email(Source='Prianca.Singh70@T-Mobile.com',Destination={'ToAddresses': ['xyz@abc.com']},Message={'Subject': {'Data': subject,'Charset': 'UTF-8'},'Body': {'Html': {'Data': report,'Charset': 'UTF-8'}}})
+	response = ses_client.send_email(Source='xyz@abc.com',Destination={'ToAddresses': ['xyz@abc.com']},Message={'Subject': {'Data': subject,'Charset': 'UTF-8'},'Body': {'Html': {'Data': report,'Charset': 'UTF-8'}}})
 
 	
 	
